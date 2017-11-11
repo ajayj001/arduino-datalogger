@@ -27,21 +27,6 @@
 - __Extensions__:
 	1. The _User_ flips the _Power switch_ (THIS IS NOT SAFE)
 
-### Turn on display
-- __Primary actor__: User
-- __Scope__: Device interaction
-- __Brief__: The _Display_ is turned on
-- __Preconditions__:
-	* The _Device_ is in _Display OFF state_
-- __Postconditions__:
-	* The _Device_ is in _Display ON state_, then back again to _Display OFF state_
-- __Basic flow__:
-	1. The _User_ presses any button on the _Keypad_
-	2. The _Device_ puts itself into _Display ON state_ 
-	3. The _Display_ shows relevant information for several seconds, allowing the _User_ to enter the _Menu_
-	4. On timeout, the _Device_ puts itself back to _Display OFF state_, turning off the display in order to save energy
-- __Extensions__:
-	[4]. On keypress, the timeout is restarted, thus increasing the time the _Display_ is on
 
 ### Start data recording
 - __Primary actor__: User
@@ -90,7 +75,7 @@
 	1. The _Display_ shows the _Device status_ until it is turned off
 - __Extensions__:
 	[1].
-		1. From _Display ON state_, the _User_ can get into the menu by pressing a specific button on the _Keypad_, thus entering the _Menu state_. Some elements of the _Device status_ might not be displayed in _Meny state_
+		1. From _Display ON state_, the _User_ can get into the menu by pressing a specific button on the _Keypad_, thus entering the _Menu_. Some elements of the _Device status_ might not be displayed when in the _Menu_.
 
 #### Date and time
 - __Brief__: The date and time are displayed when the status is checked
