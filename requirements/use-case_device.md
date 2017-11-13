@@ -1,3 +1,26 @@
+### Init (initialization sequence)
+- __Primary actor__: Device
+- __Scope__: Initialization
+- __Brief__: The _Device_ initializes every hardware module. The scheduler and other software elements are initialized. The system reads the configuration file.
+- __Preconditions__:
+	* The _Device_ is turned on
+- __Postconditions__:
+	* The _Device_ is correctly initialized
+	* Every hardware module is initialized
+	* The scheduler is loaded and tasks start running on a cyclical fashion
+	* The configuration is loaded
+- __Basic flow__:
+	1. The _Device_ is turned on
+	2. The hardware modules are initialized
+	2. The task scheduler is initialized
+	4. The configuration is loaded from the memory card
+	5. The tasks start running
+	6. The system informs the user about the current status
+- __Extensions__:
+	[4].
+		1. The configuration file is missing
+		2. A default configuration file is created
+
 ### Get battery status
 - __Primary actor__: Device
 - __Scope__: Read the status of the Device
@@ -126,4 +149,68 @@
 - __Extensions__:
 	[1].
 		1. The _Device_ enters _Display ON state_
+
+### Get position
+- __Primary actor__: Device
+- __Scope__: Data retrieval
+- __Brief__: The device gets its position from GPS everytime a measure is taken
+- __Preconditions__:
+	* The _Device_ is in _Recording state_
+- __Postconditions__:
+	* The system gets knowledge about its current position
+- __Basic flow__:
+	1. Data is retrieved from other sensors
+	2. The _Device_ gets its current position
+- __Extensions__:
+	[2].
+		1. The _Device_ cannot get its current position
+
+### Get time
+- __Primary actor__: Device
+- __Scope__: Data retrieval
+- __Brief__: The device synchronizes its own RTC with GPS time
+- __Preconditions__:
+	* The _Device_ is on
+- __Postconditions__:
+	* The system synchronizes its own RTC with GPS time
+- __Basic flow__:
+	1. A certain timeout occurs
+	2. The RTC is set to GPS time
+- __Extensions__:
+	[1].
+		1. On start up
+
+### Get data from sensor
+- __Primary actor__: Device
+- __Scope__: Data retrieval
+- __Brief__: The device gets data from a _Sensor Module_
+- __Preconditions__:
+	* The _Device_ is in _Recording state_
+- __Postconditions__:
+	* The system gets knowledge of a sensed variable
+- __Basic flow__:
+	1. A certain timeout occurs
+	2. The system reads the sensor value
+- __Extensions__:
+	[2].
+		1. The system cannot read the sensor value
+
+### Record data
+- __Primary actor__: Device
+- __Scope__: Data retrieval
+- __Brief__: The device gets data from Sensor Modules and sends it to memory buffer, along with time and position. This is done periodically with a certain frequency, which is configurable. Every sensor has a configurable option (N) to specify "this sensor is read every N periods".
+- __Preconditions__:
+	* The _Device_ is in _Recording state_
+- __Postconditions__:
+	* The memory buffer is supplied with data from sensors, along with time-position information
+- __Basic flow__:
+	1. A certain timeout occurs
+	2. The system gets data from sensors
+	3. The system gets time and position
+	4. The collected data is put together in the memory buffer
+- __Extensions__:
+	[4].
+		1. The memory buffer is full
+		2. An error is reported to the user
+
 
