@@ -45,10 +45,10 @@
 	2. The system puts itself in _Recording state_
 	3. When the _User_ requires it, the system stops recording, going back to _Idle state_
 - __Extensions__:
-	[2].
+	* [2].
 		1. On sensor fault, the system keeps on recording, inserting *null* on that field. This applies for GPS disconnection
 		2. On memory card fault, the system reinitializes the _Memory Module_, keeping on recording
-	[3]. 
+	* [3].
 		1. On low memory, the system safely stops recording, putting itself into _Idle state_
 
 ### Stop data recording
@@ -74,7 +74,7 @@
 - __Basic flow__:
 	1. The _Display_ shows the _Device status_ until it is turned off
 - __Extensions__:
-	[1].
+	* [1].
 		1. From _Display ON state_, the _User_ can get into the menu by pressing a specific button on the _Keypad_, thus entering the _Menu_. Some elements of the _Device status_ might not be displayed when in the _Menu_.
 
 #### Date and time
@@ -106,6 +106,5 @@
 	5. The new values for the options are stored in the _Memory Card_
 	6. The _Config file_ is loaded from the _Memory Card_
 - __Extensions__:
-	[3-6].
+	* [3-6].
 		1. If the _User_ does not change the recording options, the new values are not stored and the _Config file_ is not loaded
-

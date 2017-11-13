@@ -17,7 +17,7 @@
 	5. The tasks start running
 	6. The system informs the user about the current status
 - __Extensions__:
-	[4].
+	* [4].
 		1. The configuration file is missing
 		2. A default configuration file is created
 
@@ -36,7 +36,7 @@
 	3. The _Device_ gets the required information
 	4. The timeout is reseted
 - __Extensions__:
-	[3-4].
+	* [3-4].
 		1. The _Device_ is not able to get the required information
 		2. The _Device_ signals an error on the battery module
 		3. The timeout is reseted
@@ -51,12 +51,12 @@
 	* The _Device_ is in _Display ON state_, then back again to _Display OFF state_
 - __Basic flow__:
 	1. The _User_ presses any button on the _Keypad_
-	2. The _Device_ puts itself into _Display ON state_ 
+	2. The _Device_ puts itself into _Display ON state_
 	3. A certain timer is set to a certain value
 	4. The _Display_ shows relevant information for several seconds, allowing the _User_ to enter the _Menu_
 	5. On timeout, the _Device_ puts itself back to _Display OFF state_, turning off the display in order to save energy
 - __Extensions__:
-	[5]. 
+	* [5].
 		1. Any button on the _Keypad_ is pressed
 		2. The timer is reset to the value specified in [3], thus increasing the time the _Display_ is on
 
@@ -72,7 +72,7 @@
 	1. The _Device_ enters _Display ON state_
 	2. The current status of the _Device_ is displayed
 - __Extensions__:
-	[2].
+	* [2].
 		1. A certain button on the _Keypad_ is pressed
 		2. The _Menu_ is displayed (see *Display menu*)
 
@@ -93,9 +93,9 @@
 	4. The user is allowed to navigate the menu
 	5. Any button is pressed
 	6. The view of the _Menu_ is updated
-	
+
 - __Extensions__:
-	[5-6].
+	* [5-6].
 		1. A certain button on the _Keypad_ is pressed
 		2. The menu is closed, thus the status is displayed (see *Display status*)
 
@@ -115,9 +115,9 @@
 	2. An action is registered
 	3. The system makes some changes, according to the action
 	4. The new status is displayed
-	
+
 - __Extensions__:
-	[4].
+	* [4].
 		1. If the status has not changed, some signal will be displayed to let the user know
 
 ### Save data
@@ -147,7 +147,7 @@
 	3. On low memory, warn the user
 	4. On very low memory, stop recording
 - __Extensions__:
-	[1].
+	* [1].
 		1. The _Device_ enters _Display ON state_
 
 ### Get position
@@ -162,7 +162,7 @@
 	1. Data is retrieved from other sensors
 	2. The _Device_ gets its current position
 - __Extensions__:
-	[2].
+	* [2].
 		1. The _Device_ cannot get its current position
 
 ### Get time
@@ -177,7 +177,7 @@
 	1. A certain timeout occurs
 	2. The RTC is set to GPS time
 - __Extensions__:
-	[1].
+	* [1].
 		1. On start up
 
 ### Get data from sensor
@@ -192,7 +192,7 @@
 	1. A certain timeout occurs
 	2. The system reads the sensor value
 - __Extensions__:
-	[2].
+	* [2].
 		1. The system cannot read the sensor value
 
 ### Record data
@@ -209,8 +209,6 @@
 	3. The system gets time and position
 	4. The collected data is put together in the memory buffer
 - __Extensions__:
-	[4].
+	* [4].
 		1. The memory buffer is full
 		2. An error is reported to the user
-
-
