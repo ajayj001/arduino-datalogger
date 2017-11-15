@@ -7,6 +7,7 @@ The main function of the system is to record data from one/several sensors of an
 
 ### Initial specification
 The designed system must comply with the following specifications.
+
 * Sensor data will be locally stored in a memory card.
 * Firmware will be designed in a generic fashion, emphasizing simplicity in new sensor addition.
 * Sensors may have different sampling frequencies.
@@ -23,15 +24,21 @@ The designed system must comply with the following specifications.
 The following hardware is proposed to build the first prototype.
 
 #### Arduino UNO
+![Arduino UNO](img/arduino-uno.png)
 
 #### Adafruit Ultimate GPS Logger Shield
 This shield provides the _Device_ with GPS interface and a SD socket.
+![Adafruit Ultimate GPS Logger Shield](img/adafruit-ultimate-gps-logger-shield.png)
+
 #### Adafruit PowerBoost 500 Shield
 The device will be powered by a 3.7v 2500mAh Lithium Ion Polymer Battery, attached to this shield.
+![Adafruit PowerBoost 500 Shield](img/adafruit-powerboost-500-shield.png)
+
 #### Adafruit RGB LCD Shield
 This shield consists of a 16x2 Character LCD and a 5-button keypad. It will provided the _Human-machine interface_ between the _Device_ and the _User_.
+![Adafruit RGB LCD Shield](img/adafruit-rgb-lcd-shield.png)
+
 #### Pressure sensor shield
-**TODO Anotar cambios de HW (si existen)**
 
 
 
@@ -51,6 +58,7 @@ This shield consists of a 16x2 Character LCD and a 5-button keypad. It will prov
 ### Actors involved
 #### Device
 It is composed of the following hardware:
+
 * Batterry Module
 * Display
 * Keypad
@@ -475,6 +483,7 @@ Power consumption analysis is beyond the scope of this document.
 
 ### Proposed libraries
 To achieve the specified architecture and functionality, the following libraries are proposed:
+
 * [Task Scheduler](https://github.com/arkhipenko/TaskScheduler)
 	* Provides multitasking capabilities
 * [ardubson](https://github.com/argandas/ardubson)
